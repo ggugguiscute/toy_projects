@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#accordion {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.acc-wrap {
+  /* width: 100%;
+  max-width: 600px; */
+  border: 1px solid #ff0000;
+  /* margin: 1rem; */
+}
+
+.acc-wrap:not(:last-child) {
+  border-bottom: 0;
+}
+
+.acc-header {
+  display: flex;
+  /* width: 100%; */
+  justify-content: space-between;
+  padding: 1rem;
+  cursor: pointer; /*여기*/
+}
+
+.acc-header.active + .acc-content {
+  _display: block;
+  padding: 1rem;
+  height: auto;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.acc-header.active .icon {
+  transform: rotate(135deg);
+}
+
+.acc-content {
+  padding: 0 1rem;
+  _display: none;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+/* .acc-header .title {
+  width: 50%;
+} */
+
+body {
+  height: 3000px;
+}
