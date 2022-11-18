@@ -88,6 +88,15 @@ body {
   gap: 1.5rem;
 }
 
+#todo .list-box li.complete {
+  background: #e0bbe5;
+  color: #fff;
+}
+
+#todo .list-box li.complete i {
+  color: #fff;
+}
+
 #todo .list-box li p {
   font-size: 0.9rem;
   color: #777;
