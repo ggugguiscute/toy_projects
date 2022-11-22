@@ -66,3 +66,25 @@ body {
 .navigator img {
   width: 80px;
 }
+
+.dot-wrap {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot-wrap .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #fff;
+}
+
+.dot-wrap .dot.active {
+  background: #777;
+}

@@ -3,6 +3,7 @@ const imgs = document.querySelector(".imgs");
 const img = document.querySelectorAll(".imgs img");
 const slWrap = document.querySelector(".sl-wrap");
 const navigators = document.querySelectorAll(".navigator a");
+const dots = document.querySelectorAll(".dot");
 
 //3.초기화 변수
 let currentIdx = 0;
@@ -12,6 +13,12 @@ let timer = null;
 const startSlider = (eq) => {
   imgs.style.left = -100 * eq + "%";
   currentIdx = eq;
+
+  //8.인디케이터 디자인 변경
+  dots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+  dots[currentIdx].classList.add("active");
 };
 
 //4. 일정 시간 간격으로 슬라이드 이동
@@ -22,7 +29,7 @@ const startTimer = () => {
     const sliderLoopIdx = (currentIdx + 1) % img.length;
     //console.log(sliderLoopIdx);
     startSlider(sliderLoopIdx);
-  }, 5000);
+  }, 3000);
 };
 
 //5. 슬라이드 요소에 마우스 커서를 올렸을 때 기능 멈춤
@@ -41,7 +48,27 @@ slWrap.addEventListener("mouseout", () => {
 //7.네비게이터 클릭했을 때 슬라이드 기능 실행
 navigators.forEach((navigator) => {
   navigator.addEventListener("click", function () {
-    console.log(this);
+    //console.log(this);
+    if (this.getAttribute("class") === "prev") {
+      if (currentIdx === 0) {
+        return false; //작동 멈춤
+      } else {
+        startSlider(currentIdx - 1);
+      }
+    } else {
+      if (currentIdx === img.length - 1) {
+        return false;
+      } else {
+        startSlider(currentIdx + 1);
+      }
+    }
+  });
+});
+
+//9.dot를 클릭했을 때 해당 인덱스로 슬라이드 이동 (?)
+dots.forEach((dot, idx) => {
+  dot.addEventListener("click", () => {
+    startSlider(idx);
   });
 });
 
