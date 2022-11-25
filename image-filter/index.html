@@ -15,41 +15,56 @@
     <div class="wrap">
       <div class="filter-wrap">
         <div class="filter-btns">
-          <button class="filter-btn active" data-filter="All">All</button>
-          <button class="filter-btn" data-filter="Bag">Bag</button>
-          <button class="filter-btn" data-filter="Shoe">Shoe</button>
-          <button class="filter-btn" data-filter="Watch">Watch</button>
-          <button class="filter-btn" data-filter="Camera">Camera</button>
-          <button class="filter-btn" data-filter="Headphone">Headphone</button>
+          <button class="filter-btn" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="bag">Bag</button>
+          <button class="filter-btn" data-filter="shoe">Shoe</button>
+          <button class="filter-btn" data-filter="watch">Watch</button>
+          <button class="filter-btn" data-filter="camera">Camera</button>
+          <button class="filter-btn" data-filter="headphone">Headphone</button>
         </div>
         <!-- End of Filter buttons -->
         <div class="filter-images">
-          <div class="filter-image">
+          <div class="filter-image" data-filter="bag">
             <span><img src="images/bag-1.jpg" alt="" /></span>
           </div>
-          <div class="filter-image">
+          <div class="filter-image" data-filter="camera">
             <span><img src="images/camera-1.jpg" alt="" /></span>
           </div>
-          <div class="filter-image">
+          <div class="filter-image" data-filter="camera">
             <span><img src="images/camera-2.jpg" alt="" /></span>
           </div>
-          <div class="filter-image">
+          <div class="filter-image" data-filter="headphone">
             <span><img src="images/headphone-1.jpg" alt="" /></span>
           </div>
-          <div class="filter-image">
+          <div class="filter-image" data-filter="headphone">
             <span><img src="images/headphone-2.jpg" alt="" /></span>
           </div>
-          <div class="filter-image">
+          <div class="filter-image" data-filter="shoe">
             <span><img src="images/shoe-1.jpg" alt="" /></span>
           </div>
-          <div class="filter-image">
+          <div class="filter-image" data-filter="shoe">
             <span><img src="images/shoe-2.jpg" alt="" /></span>
           </div>
-          <div class="filter-image">
+          <div class="filter-image" data-filter="watch">
             <span><img src="images/watch-1.jpg" alt="" /></span>
           </div>
         </div>
+        <!-- End of Filter buttons -->
+        <div class="light-box">
+          <div class="light-box-txt">
+            <span class="title"
+              >Image Category :
+              <p>Bag</p></span
+            >
+            <i class="ri-close-line"></i>
+          </div>
+          <div class="light-box-img">
+            <img src="" alt="" />
+          </div>
+        </div>
+        <!-- End of light Box -->
       </div>
+      <div class="overlay"></div>
     </div>
     <script src="custom.js"></script>
   </body>
